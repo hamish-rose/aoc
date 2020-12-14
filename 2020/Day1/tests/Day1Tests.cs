@@ -10,10 +10,11 @@ namespace Day1Tests
         [Fact]
         public void PuzzleTest()
         {
+            int sum = 2020;
             List<int> input = Util.FileUtilities.ReadIntsFromFile("input.txt")
                 .ToList();
-            var result = Solution.FindPairWithSum(input, 2020);
-            Assert.Equal((1162, 858), result);
+            var result = Solution.FindPairWithSum(input,sum);
+            Assert.Equal(sum, result.Item1 + result.Item2);
         }
     }
 }

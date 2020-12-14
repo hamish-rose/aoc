@@ -13,8 +13,18 @@ namespace Util
         /// <returns></returns>
         public static IEnumerable<int> ReadIntsFromFile(string path)
         {
-            return File.ReadLines(path)
+            return ReadLinesFromFile(path)
                 .Select(int.Parse);
+        }
+
+        /// <summary>
+        /// Read lines from file.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static IEnumerable<string> ReadLinesFromFile(string path)
+        {
+            return File.ReadLines(path);
         }
     }
 }
