@@ -7,7 +7,7 @@ namespace Solutions.Day1
     public class Tests
     {
         [Fact]
-        public void PuzzleTest()
+        public void PuzzleSolution()
         {
             int sum = 2020;
             List<int> input = Util.FileUtilities.ReadIntsFromFile("./day1/input.txt")
