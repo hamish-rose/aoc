@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Day1
+namespace Solutions.Day1
 {
     public static class Solution
     {

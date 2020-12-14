@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Day2
+namespace Solutions.Day2
 {
     public static class Solution
     {

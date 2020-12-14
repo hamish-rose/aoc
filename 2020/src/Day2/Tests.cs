@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using Day2;
-using Util;
+using Solutions.Util;
 using Xunit;
 
-namespace Day2Tests
+namespace Solutions.Day2
 {
     public class Day2Tests
     {
@@ -21,7 +20,7 @@ namespace Day2Tests
         [Fact]
         public void PuzzleSolution()
         {
-            IEnumerable<string> input = FileUtilities.ReadLinesFromFile("input.txt");
+            IEnumerable<string> input = FileUtilities.ReadLinesFromFile("./day2/input.txt");
 
             int count = 0;
             

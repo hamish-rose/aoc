@@ -2,7 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-
         <IsPackable>false</IsPackable>
     </PropertyGroup>
 
@@ -12,13 +11,12 @@
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
         <PackageReference Include="coverlet.collector" Version="1.0.1" />
     </ItemGroup>
-
+    
     <ItemGroup>
-      <ProjectReference Include="..\src\Day1.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <Content Include=".\input.txt">
+        <Content Include="./day1/input.txt">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="./day2/input.txt">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
     </ItemGroup>

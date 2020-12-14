@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace Util
+namespace Solutions.Util
 {
     public static class FileUtilities
     {
