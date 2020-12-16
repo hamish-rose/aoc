@@ -13,7 +13,7 @@
     </ItemGroup>
     
     <ItemGroup>
-        <Content Include="./**/input.txt">
+        <Content Include="./day*/input.txt">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
        

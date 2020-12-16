@@ -6,16 +6,24 @@ namespace Solutions.Day3
 {
     public static class Solution
     {
-        public static int CountTreesOnPath(IEnumerable<string> mapInput)
+        /// <summary>
+        /// Given the map input, and the gradient/slope variables, count the number
+        /// of trees encountered before reaching the bottom/last line of the map
+        /// </summary>
+        /// <param name="mapInput"> map input, each value is a line of the map. repeated horizontally</param>
+        /// <param name="right"> the horizontal component of the movement gradient</param>
+        /// <param name="down"> the vertical component of the movement gradient</param>
+        /// <returns> number of trees encountered before reaching the bottom.</returns>
+        public static int CountTreesOnPath(IEnumerable<string> mapInput, int right, int down)
         {
             InfinitelyHorizontalMap map = new InfinitelyHorizontalMap(mapInput.ToArray());
             int trees = 0;
 
             while (!map.IsComplete)
             {
-                map.Move(3, 1);
+               (int x, int y) newLocation = map.Move(right, down);
                
-                if (map.IsTree(map.CurrentLocation.x, map.CurrentLocation.y))
+                if (map.IsTree(newLocation.x, newLocation.y))
                 {
                     trees++;
                 }
@@ -33,7 +41,7 @@ namespace Solutions.Day3
 
         public bool IsTree(int x, int y)
         {
-            if (x > _lines[y].Length)
+            if (x >= _lines[y].Length)
             {
                 x %= _lines[y].Length;
             }
@@ -49,7 +57,7 @@ namespace Solutions.Day3
             CurrentLocation = (0, 0);
         }
 
-        public void Move(int right, int down)
+        public (int x, int y) Move(int right, int down)
         {
             if (CurrentLocation.y + down > _lines.Length)
             {
@@ -62,6 +70,8 @@ namespace Solutions.Day3
             {
                 IsComplete = true;
             }
+
+            return (CurrentLocation.x, CurrentLocation.y);
         }
     }
 }
