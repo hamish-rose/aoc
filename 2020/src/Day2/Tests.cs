@@ -14,7 +14,7 @@ namespace Solutions.Day2
         [InlineData("1-2 i", "kiwi", true)]
         public void RuleValidation(string rule, string password, bool isValid)
         {
-          Assert.Equal(isValid,Solution.IsValidPassword(rule, password));
+            Assert.Equal(isValid, Solution.IsValidPassword(rule, password));
         }
 
         [Fact]
@@ -22,20 +22,11 @@ namespace Solutions.Day2
         {
             IEnumerable<string> input = FileUtilities.ReadLinesFromFile("./day2/input.txt");
 
-            int count = 0;
-            
-            foreach (string line in input)
-            {
-                List<string> inputs = line.Split(':')
+            int count = input.Select(line => line.Split(':')
                     .Select(x => x.Trim())
-                    .ToList();
+                    .ToList())
+                    .Count(inputs => Solution.IsValidPassword(inputs[0], inputs[1]));
 
-                if (Solution.IsValidPassword(inputs[0], inputs[1]))
-                {
-                    count++;
-                }
-            }
-            
             Assert.Equal(614, count);
         }
     }

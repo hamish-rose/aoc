@@ -13,12 +13,10 @@
     </ItemGroup>
     
     <ItemGroup>
-        <Content Include="./day1/input.txt">
+        <Content Include="./**/input.txt">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
-        <Content Include="./day2/input.txt">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </Content>
+       
     </ItemGroup>
 
 </Project>
