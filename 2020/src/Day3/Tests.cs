@@ -26,7 +26,7 @@ namespace Solutions.Day3
             int d = Solution.CountTreesOnPath(input, 7, 1);
             int e = Solution.CountTreesOnPath(input, 1, 2);
             
-            Assert.Equal(1, a*b*c*d*e);
+            Assert.Equal(958815792, a*b*c*d*e);
         }
     }
 }
